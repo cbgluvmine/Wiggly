@@ -1,0 +1,28 @@
+import time
+wigglies = int(input("How Many Wiggles Do You Want? (Even Number) "))
+times = int(input("How many times? "))
+word = ""
+word = input("Enter your own word ")
+x = 1
+foucount = 1
+while foucount < (times):
+    count = 1
+    tab = "   "
+    space = " "
+    begwiggle = word
+    aftwiggle = "   " + word
+    seccount = 1
+    thicount = 1
+    for x in range(wigglies):
+        if thicount < wigglies / 2:
+            print((tab + (space * thicount) + begwiggle) + (wigglies * aftwiggle))
+            thicount += 1
+            count += 1
+            foucount += 1
+            time.sleep(0.001)
+        elif thicount >= wigglies / 2:
+            print((tab + (space * (count - seccount)) + begwiggle) + (wigglies * aftwiggle))
+            thicount += 1
+            seccount += 1
+            foucount += 1
+            time.sleep(0.001)
