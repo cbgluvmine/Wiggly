@@ -1,6 +1,12 @@
 import time
-wigglies = int(input("How Many Wiggles Do You Want? (Even Number) "))
-times = int(input("How many times? "))
+wigglies = ""
+times = ""
+while not wigglies.isnumeric():
+    wigglies = input("How Many Wiggles Do You Want? (Even Number) ")
+while not times.isnumeric():
+    times = input("How many times? ")
+wigglies = int(wigglies)
+times = int(times)
 word = ""
 word = input("Enter your own word ")
 x = 1
